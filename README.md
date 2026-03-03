@@ -1,6 +1,6 @@
 # KeepITBlue
 
-**KeepITBlue** is a web platform for ocean and beach conservation, helping non-profits protect marine ecosystems through community engagement and environmental initiatives.
+**KeepITBlue** is a web platform for ocean and beach conservation, helping non-profits protect marine ecosystems through community engagement and environmental initiatives. 
 
 ---
 
