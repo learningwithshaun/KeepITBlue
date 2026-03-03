@@ -1,81 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | KeepITBlue</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | KeepITBlue</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="header">
-        <nav>
-            <a href="index.html">
-                <img src="images/logo.png" alt="KeepITBlue Logo" class="logo"> 
-            </a>
-          
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="donate.html">Donate</a>
-            <a href="projects.html">Projects</a>
-            <a href="volunteer.html">Volunteer</a>
-        </nav>
-    </div>
 
+  <!-- Navigation -->
+  <div class="header">
+    <nav>
+      <a href="index.html"><img src="images/logo.png" alt="KeepITBlue Logo" class="logo"></a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="donate.html">Donate</a>
+      <a href="projects.html">Projects</a>
+      <a href="volunteer.html">Volunteer</a>
+    </nav>
+  </div>
 
-
-  <!-- Hero Section -->
-  <div class="hero-section">
-    <div class="hero-overlay"></div>
+  <!-- Hero -->
+  <div class="hero-section" style="height:52vh">
+    <div class="overlay"></div>
     <div class="hero-content">
-        <h1>Get in Touch with Us</h1>
-        <p>We are here to help you. Reach out with any questions or concerns!</p>
+      <h1>Get In Touch</h1>
+      <p>We'd love to hear from you — reach out with any questions or ideas.</p>
     </div>
-</div>
+  </div>
 
+  <!-- Contact Form -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p>Fill out the form below and we'll get back to you as soon as possible.</p>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="contact-container">
-            <h1>Contact Us</h1>
-            <p>We would love to hear from you! Please fill out the form below to get in touch.</p>
-            
-            <div class="contact-form glass-effect">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="glass-button">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal for confirmation -->
-    <div id="confirmationModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Form Submitted Successfully!</h2>
-            <p id="submittedDetails"></p>
-        </div>
+      <div class="glass-effect">
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+          </div>
+          <button type="submit" class="glass-button" style="width:100%">Send Message</button>
+        </form>
+      </div>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 KeepITBlue | All rights reserved.</p>
-    </footer>
+  <!-- Confirmation Modal -->
+  <div id="confirmationModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close close" aria-label="Close">&times;</button>
+      <div class="modal-icon">✅</div>
+      <h2 id="modal-title">Message Sent!</h2>
+      <p>Here's what you submitted:</p>
+      <div id="submittedDetails"></div>
+    </div>
+  </div>
 
-    <!-- Link to the External JavaScript File -->
-    <script src="formValidation.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="social-media">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 KeepITBlue | All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="formValidation.js"></script>
 </body>
 </html>

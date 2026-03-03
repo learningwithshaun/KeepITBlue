@@ -1,123 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donation Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | KeepITBlue</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <!-- Navigation Section -->
-    <header class="header">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="projects.html">Projects</a>
-            <a href="donate.html">Donate</a>
-            <a href="volunteer.html">Volunteer</a>
-        
-        </nav>
-    </header>
+  <!-- Navigation -->
+  <header class="header">
+    <nav>
+      <a href="index.html"><img src="images/logo.png" alt="KeepITBlue Logo" class="logo"></a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html" class="active">Donate</a>
+      <a href="projects.html">Projects</a>
+      <a href="volunteer.html">Volunteer</a>
+    </nav>
+  </header>
 
-    <!-- Donation Section -->
-    <section class="donation-hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Your Donations Make a Difference</h1>
-            <p>Support us in protecting and cleaning our oceans. Every donation helps us continue our mission.</p>
-        </div>
-    </section>
-
-    <!-- Donation Form Section -->
-    <section id="donate-now" class="donation-form-section">
-        <div class="container">
-            <h2>Contribute Today</h2>
-            <p>Choose how you would like to contribute. Your generosity keeps us going!</p>
-            <div class="donation-options">
-                <div class="donation-card">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <h3>One-Time Donation</h3>
-                    <p>Make a one-time contribution to support our ocean clean-up projects.</p>
-                </div>
-                <div class="donation-card">
-                    <i class="fas fa-sync-alt"></i>
-                    <h3>Monthly Support</h3>
-                    <p>Set up recurring donations to help us keep our oceans clean all year round.</p>
-                    <h4>COMMING SOON</h4>
-                    <style>
-                        h4 {
-                            text-decoration: line-through;
-                            color: #003366;
-                        }
-                    </style>
-                </div>
-            </div>
-
-            <!-- Donation Form -->
-            <form action="your-donation-processing-url" method="POST" class="donation-form" id="donation-form">
-                <h3>Donation Form</h3>
-                <div class="form-group">
-                    <label for="full-name">Full Name:</label>
-                    <input type="text" id="full-name" name="full-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                <div class="form-group">
-                    <label for="amount">Donation Amount (USD):</label>
-                    <input type="number" id="amount" name="amount" required min="1" step="any">
-                </div>
-                <div class="form-group">
-                    <label for="payment-method">Payment Method:</label>
-                    <select id="payment-method" name="payment-method" required>
-                        <option value="credit-card">Credit Card</option>
-                        <option value="debit-card">Debit Card</option>
-                        <option value="paypal">PayPal</option>
-                        <option value="bank-transfer">Bank Transfer</option>
-                    </select>
-                </div>
-                <div class="form-group" id="credit-card-details">
-                    <label for="card-number">Card Number:</label>
-                    <input type="text" id="card-number" name="card-number" pattern="[0-9]{13,16}" placeholder="1234 5678 9012 3456">
-                    <label for="expiry-date">Expiry Date:</label>
-                    <input type="month" id="expiry-date" name="expiry-date">
-                    <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" placeholder="123">
-                </div>
-                <div class="form-group" id="paypal-info">
-                    <p>To complete your donation using PayPal, you will be redirected to the PayPal site.</p>
-                </div>
-                <button type="submit" class="donate-button">Donate Now</button>
-               
-            </form>
-        </div>
-    </section>
-
-    <!-- Modal Structure -->
-    <div id="donation-modal" class="modal">
-        <div class="modal-content" id="modal-content">
-            <!-- Dynamic content will be inserted here -->
-        </div>
+  <!-- Hero -->
+  <section class="donation-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Your Donation Makes a Difference</h1>
+      <p>Every contribution helps us protect and restore our oceans for future generations.</p>
+      <a href="#donate-now" class="cta">Donate Now</a>
     </div>
+  </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="social-media">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+  <!-- Donation Options + Form -->
+  <section id="donate-now" class="donation-form-section">
+    <div class="container">
+      <h2>Contribute Today</h2>
+      <p>Choose how you'd like to support our mission.</p>
+
+      <div class="donation-options">
+        <div class="donation-card reveal">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h3>One-Time Donation</h3>
+          <p>Make a single contribution to support our ocean clean-up projects.</p>
         </div>
-        <p>&copy; 2025 KeepITBlue | All rights reserved.</p>
-    </footer>
+        <div class="donation-card reveal">
+          <i class="fas fa-sync-alt"></i>
+          <h3>Monthly Support</h3>
+          <p>Set up recurring donations to keep our oceans clean all year round.</p>
+          <h4>Coming Soon</h4>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- Donation Form -->
+      <form class="donation-form" id="donation-form" novalidate>
+        <h3>Donation Form</h3>
+
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Jane Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number <span style="font-weight:400;color:#888">(optional)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
+        </div>
+        <div class="form-group">
+          <label for="amount">Donation Amount (USD)</label>
+          <input type="number" id="amount" name="amount" placeholder="25" required min="1" step="any">
+        </div>
+        <div class="form-group">
+          <label for="payment-method">Payment Method</label>
+          <select id="payment-method" name="payment-method" required>
+            <option value="credit-card">Credit Card</option>
+            <option value="debit-card">Debit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank-transfer">Bank Transfer</option>
+          </select>
+        </div>
+
+        <!-- Card details (shown for credit/debit) -->
+        <div id="credit-card-details" style="display:none">
+          <div class="form-group">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+          </div>
+          <div style="display:flex;gap:16px">
+            <div class="form-group" style="flex:1">
+              <label for="expiry-date">Expiry Date</label>
+              <input type="month" id="expiry-date" name="expiry-date">
+            </div>
+            <div class="form-group" style="flex:1">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+            </div>
+          </div>
+        </div>
+
+        <!-- PayPal info -->
+        <div id="paypal-info" style="display:none;padding:14px;background:rgba(0,204,255,0.07);border-radius:10px;margin-bottom:18px;">
+          <p style="font-size:0.95rem;color:#003366">
+            <i class="fab fa-paypal"></i> You'll be redirected to PayPal to complete your secure donation.
+          </p>
+        </div>
+
+        <button type="submit" class="donate-button">
+          <i class="fas fa-heart" style="margin-right:8px"></i>Donate Now
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Donation Success Modal -->
+  <div id="donation-modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-content" id="modal-content">
+      <!-- Dynamically populated by script.js -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-media">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 KeepITBlue | All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

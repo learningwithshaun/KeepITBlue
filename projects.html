@@ -1,78 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KeepITBlue NGO - Projects</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | KeepITBlue</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <!-- Navigation Header -->
-    <div class="header">
-        <nav>
-            <a href="index.html">
-                <img src="images/logo.png" alt="KeepITBlue Logo" class="logo"> 
-            </a>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="donate.html">Donate</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="volunteer.html">Volunteer</a>
-        </nav>
+  <!-- Navigation -->
+  <div class="header">
+    <nav>
+      <a href="index.html"><img src="images/logo.png" alt="KeepITBlue Logo" class="logo"></a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html">Donate</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="volunteer.html">Volunteer</a>
+    </nav>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero-section projects-hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Our Projects</h1>
+      <p>Explore the initiatives we are working on to protect and preserve our oceans.</p>
+    </div>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="cleanup">Cleanup</button>
+    <button class="filter-btn" data-filter="plastic">Plastic</button>
+    <button class="filter-btn" data-filter="education">Education</button>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="projects-container">
+
+    <div class="project-card reveal" data-category="cleanup">
+      <img src="images/l1.jpg" alt="Beach Cleanup Campaign" class="project-image">
+      <div class="project-info">
+        <span class="project-tag">Cleanup</span>
+        <h3>Beach Cleanup Campaign</h3>
+        <p>Join us in cleaning up local beaches to reduce pollution and create a cleaner, healthier environment for marine life and coastal communities.</p>
+        <a href="https://www.thebeachcoop.org/cleanups/" target="_blank" rel="noopener" class="cta">Learn More</a>
+      </div>
     </div>
 
-    <!-- Hero Section for Projects Page -->
-    <div class="hero-section projects-hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Our Projects</h1>
-            <p>Explore the initiatives we are working on to protect and preserve the oceans.</p>
-        </div>
+    <div class="project-card reveal" data-category="plastic">
+      <img src="images/l5.jpg" alt="Ocean Plastic Reduction" class="project-image">
+      <div class="project-info">
+        <span class="project-tag">Plastic</span>
+        <h3>Ocean Plastic Reduction</h3>
+        <p>We are collaborating with local businesses to reduce plastic waste and promote the use of sustainable, eco-friendly materials across supply chains.</p>
+        <a href="https://www.oceanicsociety.org/resources/7-ways-to-reduce-ocean-plastic-pollution-today/" target="_blank" rel="noopener" class="cta">Learn More</a>
+      </div>
     </div>
 
-    <!-- Projects Section -->
-    <div class="projects-container">
-        <div class="project-card">
-            <img src="images/l1.jpg" alt="Project 1" class="project-image">
-            <div class="project-info">
-                <h3>Beach Cleanup Campaign</h3>
-                <p>Join us in cleaning up local beaches to reduce pollution and create a cleaner, healthier environment for marine life.</p>
-                <a href="https://www.thebeachcoop.org/cleanups/" class="cta">Learn More</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <img src="images/l5.jpg" alt="Project 2" class="project-image">
-            <div class="project-info">
-                <h3>Ocean Plastic Reduction</h3>
-                <p>We are collaborating with local businesses to reduce plastic waste and promote the use of sustainable materials.</p>
-                <a href="https://www.oceanicsociety.org/resources/7-ways-to-reduce-ocean-plastic-pollution-today/#:~:text=Recycling%20helps%20keep%20plastics%20out,types%20of%20plastic%20they%20accept." class="cta">Learn More</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <img src="images/l8.jpg" alt="Project 3" class="project-image">
-            <div class="project-info">
-                <h3>Marine Life Education Program</h3>
-                <p>Our education program raises awareness about the importance of marine biodiversity and how to protect it.</p>
-                <a href="https://www.aquarium.co.za/foundation/education" class="cta">Learn More</a>
-            </div>
-        </div>
+    <div class="project-card reveal" data-category="education">
+      <img src="images/l8.jpg" alt="Marine Life Education" class="project-image">
+      <div class="project-info">
+        <span class="project-tag">Education</span>
+        <h3>Marine Life Education Program</h3>
+        <p>Our education programme raises awareness about the importance of marine biodiversity and equips communities with the knowledge to protect it.</p>
+        <a href="https://www.aquarium.co.za/foundation/education" target="_blank" rel="noopener" class="cta">Learn More</a>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 KeepITBlue | All rights reserved.</p>
-        <div class="social-media">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
-    
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="call-to-action" style="margin-top:20px">
+    <div class="container" style="background:none;box-shadow:none;margin:0 auto">
+      <h2>Want to support these projects?</h2>
+      <p>Your donation or volunteer time goes directly toward making these initiatives happen.</p>
+      <div class="button-container" style="justify-content:center">
+        <a href="donate.html" class="btn">Donate</a>
+        <a href="volunteer.html" class="btn" style="background:transparent;border:2px solid #00ccff;color:#00ccff">Volunteer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-media">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 KeepITBlue | All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
